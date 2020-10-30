@@ -1,0 +1,46 @@
+// oricad_version.cpp
+
+/*
+ * This file is part of Oricad, a computer-aided origami design tool
+ *
+ * Copyright (c) 2020 Simon Marynissen <marynissen.simon@gmail.com>
+ *
+ * Oricad is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Oricad is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Oricad.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#include <oricad_version.h>
+
+#include <string>
+
+using namespace oricad;
+
+unsigned int Version::major() {
+  return @ORICAD_VERSION_MAJOR@;
+}
+
+unsigned int Version::minor() {
+  return @ORICAD_VERSION_MINOR@;
+}
+
+unsigned int Version::patch() {
+  return @ORICAD_VERSION_PATCH@;
+}
+
+std::string Version::full() {
+  return "@ORICAD_VERSION@";
+}
+
+std::string Version::gitHash() {
+  return "@ORICAD_GIT_HASH@";
+}
